@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  padding: 30px;
+}
+
+.piano {
+  position: relative;
+  width: 420px;
+  margin: 40px auto;
+}
+
+.white-keys {
+  display: flex;
+}
+
+.key.white {
+  width: 60px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+}
+
+.black-keys {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+}
+
+.key.black {
+  position: absolute;
+  width: 40px;
+  height: 120px;
+  background: black;
+  z-index: 2;
+  border: none;
+}
+
+.key.black[data-note="C#"] { left: 40px; }
+.key.black[data-note="D#"] { left: 100px; }
+.key.black[data-note="F#"] { left: 220px; }
+.key.black[data-note="G#"] { left: 280px; }
+.key.black[data-note="A#"] { left: 340px; }
+
+
+.key:hover {
+  filter: brightness(1.3);
+  cursor: pointer;
+}
+
+.spacer {
+  width: 60px;
+}
