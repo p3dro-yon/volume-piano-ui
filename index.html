@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piano Volume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Piano Volume</h1>
+  <p>click on the piano keys to adjust the volume</p>
+
+  <div class="piano">
+    <div class="white-keys">
+      <button class="key white" data-note="C" data-volume="10"></button>
+      <button class="key white" data-note="D" data-volume="20"></button>
+      <button class="key white" data-note="E" data-volume="30"></button>
+      <button class="key white" data-note="F" data-volume="40"></button>
+      <button class="key white" data-note="G" data-volume="50"></button>
+      <button class="key white" data-note="A" data-volume="60"></button>
+      <button class="key white" data-note="B" data-volume="70"></button>
+    </div>
+    <div class="black-keys">
+      <button class="key black" data-note="C#" data-volume="15"></button>
+      <button class="key black" data-note="D#" data-volume="25"></button>
+      
+      <button class="key black" data-note="F#" data-volume="45"></button>
+      <button class="key black" data-note="G#" data-volume="55"></button>
+      <button class="key black" data-note="A#" data-volume="65"></button>
+    </div>
+  </div>
+
+  <p id="volume-display">volume: 0%</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
