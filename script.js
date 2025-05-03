@@ -23,6 +23,11 @@ document.querySelectorAll(".key").forEach((key) => {
     const note = key.dataset.note;
     const noteIndex = notes.indexOf(note);
 
+    if (noteIndex === -1) {
+      console.warn(`invalid note: ${note}`);
+      return;
+    }
+
     currentVolume = Math.round((noteIndex / (notes.length - 1)) * 100);
     volumeDisplay.textContent = `volume: ${currentVolume}%`;
 
