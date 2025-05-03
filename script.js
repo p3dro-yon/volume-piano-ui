@@ -1,6 +1,8 @@
 let currentVolume = 50;
 const volumeDisplay = document.getElementById("volume-display");
 
+const notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+
 const noteRates = {
   "C": 1.00,
   "C#": 1.06,
@@ -19,9 +21,9 @@ const noteRates = {
 document.querySelectorAll(".key").forEach((key) => {
   key.addEventListener("click", () => {
     const note = key.dataset.note;
-    const vol = parseInt(key.dataset.volume);
+    const noteIndex = notes.indexOf(note);
 
-    currentVolume = vol;
+    currentVolume = Math.round((noteIndex / (notes.length - 1)) * 100);
     volumeDisplay.textContent = `volume: ${currentVolume}%`;
 
     const audio = new Audio("piano-c4.mp3");
